@@ -1,0 +1,152 @@
+$grid-columns: 4;
+$grid-gutter-width: 2rem;
+
+body {
+    height: 100vh;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.55em;
+
+    @media screen and (min-width: 651px) {
+        gap: 3em;
+    }
+    @media screen and (max-width: 650px) {
+        flex-wrap: wrap;
+        margin-bottom: 0.7em;
+    }
+}
+.main__container {
+    padding-top: 80px;
+    padding-bottom: 2em;
+
+    @media screen and (max-width: 650px) {
+        padding-top: 120px;
+    }
+}
+
+.navbar__menu {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    gap: 1.5em;
+
+    &--item {
+    }
+}
+.slider {
+    width: 10rem;
+    height: 11px;
+    margin: 0 1em 0 0.5em;
+
+    @media screen and (max-width: 990px) {
+        width: 7rem;
+    }
+
+    & .noUi-handle {
+        height: 18px;
+        width: 18px;
+        top: -5px;
+        right: -9px;
+        border-radius: 9px;
+    }
+    & .noUi-handle::before,
+    & .noUi-handle::after {
+        display: none;
+    }
+
+    &__min,
+    &__max {
+        border-radius: 0.3em;
+        width: 50px;
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0.4);
+        text-align: center;
+    }
+}
+
+.filter__price {
+    @media screen and (max-width: 940px) {
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    @media screen and (min-width: 371px) and (max-width: 460px) {
+        grid-row-start: 4;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    @media screen and (max-width: 370px) {
+        grid-row-start: 5;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    &--inner {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.navbar {
+    &__search {
+        @media screen and (min-width: 651px) {
+            flex-grow: 1;
+            max-width: 50%;
+        }
+        @media screen and (max-width: 650px) {
+            order: 3;
+            width: 100%;
+        }
+    }
+    &__menu {
+        flex-grow: 0;
+    }
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.spinner {
+    position: relative;
+    grid-column: 2;
+
+    &-border {
+        position: absolute;
+        left: 50%;
+        top: 4rem;
+    }
+}
+
+.btn-dark:hover {
+    background-color: lighten($color: rgb(49, 49, 49), $amount: 0.2);
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 0;
+    font-size: 0.9rem;
+
+    &__copyright {
+        margin: 0;
+    }
+    &__rs {
+        margin: 0;
+    }
+}
